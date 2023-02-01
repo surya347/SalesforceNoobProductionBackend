@@ -31,7 +31,7 @@ const authenticate = async (req, res, next) => {
     next();
   } catch (error) {
     console.log('error:'+JSON.stringify(error))
-    res.status(401).send({"error:"+JSON.stringify(error)});
+    res.status(401).send({"error:":JSON.stringify(error)});
   }
 };
 
