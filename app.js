@@ -88,7 +88,7 @@ app.get('/', (req,res)=>{
   });
   
   app.get('/allusers',adminAuthenticate, (req,res)=>{
-   return res.send(req.allUsers); 
+   return res.send(req.allUsers);  
   });
   
    //admin profile routing with middleware authentication

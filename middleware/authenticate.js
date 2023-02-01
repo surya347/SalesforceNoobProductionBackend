@@ -23,14 +23,15 @@ const authenticate = async (req, res, next) => {
 
 
     if (!rootUsers) {
-      console.log("Users not found");
+      console.log("Users not found"); 
     }
 
     req.token = jwtToken;
     req.rootUsers = rootUsers;
     next();
   } catch (error) {
-    res.status(401).send("Unauthorizes:no token provide");
+    console.log('error:'+JSON.stringify(error))
+    res.status(401).send({"error:"+JSON.stringify(error)});
   }
 };
 
